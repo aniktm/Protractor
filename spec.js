@@ -1,17 +1,20 @@
 //spec.js
-/* describe('Demo suite', function() {
+describe('Demo suite', function() {
 
     it('should have a title', function() {
 
         browser.get('https://www.protractortest.org');
-        expect(browser.get.title()).toContain('Protractor')
+        expect(browser.getTitle()).toContain('Protractor')
+        browser.sleep(5000);
     });
-}); */
 
-describe('Protractor Demo App', function() {
-    it('should have a title', function() {
-        browser.get('http://juliemr.github.io/protractor-demo/');
+    it('test name input in text box', function() {
 
-        expect(browser.getTitle()).toEqual('Super Calculator');
-    });
+        browser.get('https://angularjs.org/');
+        var input = element(by.model('yourName'));
+        input.sendKeys('Joy');
+
+        expect(input.getAttribute('value')).toBe('Joy')
+        browser.sleep(5000);
+    })
 });

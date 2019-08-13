@@ -12,9 +12,9 @@ describe('Demo suite', function() {
 
         browser.get('https://angularjs.org/');
         var input = element(by.model('yourName'));
-        input.sendKeys('Joy');
+        input.sendKeys('joy');
 
-        expect(input.getAttribute('value')).toBe('Joy')
+        expect(input.getAttribute('value')).toBe('joy')
         browser.sleep(5000);
     })
 });
